@@ -1,0 +1,31 @@
+This project is a simple web application that allows users to search for Marvel characters using the Marvel API. Here's a breakdown of what the project does:
+
+HTML Structure:
+The HTML file (index.html) consists of:
+An input field where users can type the name of a Marvel character.
+A submit button to trigger the character search.
+Containers to display the search results.
+CSS Styling:
+CSS (styles.css) is used to style the HTML elements.
+JavaScript Functionality (app.js):
+Autocomplete Feature:
+As the user types in the input field, the application fetches character names from the Marvel API that match the input using the nameStartsWith parameter.
+The matching character names are displayed as suggestions in a dropdown list below the input field.
+Fetching Character Data:
+When the user clicks on the "Submit" button or presses Enter, the application fetches data for the character whose name is entered in the input field using the Marvel API.
+The fetched data includes the character's name, thumbnail image, and description.
+Displaying Character Information:
+The fetched character data is displayed in a card format showing the character's image, name, and description.
+Marvel API Integration:
+The application integrates with the Marvel API to fetch character data.
+It uses a timestamp, a public key, a private key, and an MD5 hash value for authentication to access the Marvel API.
+Structure of Marvel API URLs:
+Character Autocomplete URL: https://gateway.marvel.com:443/v1/public/characters?ts=${timestamp}&apikey=${apiKey}&hash=${hashValue}&nameStartsWith=${input.value}
+Character Data URL: https://gateway.marvel.com:443/v1/public/characters?ts=${timestamp}&apikey=${apiKey}&hash=${hashValue}&name=${input.value}
+Marvel API Authentication:
+Timestamp (ts): A timestamp is generated and used as part of the authentication process.
+Public Key (publicKey): The public API key provided by Marvel.
+Private Key (privateKey): The private API key provided by Marvel.
+Hash Value (hashVal): An MD5 hash generated using a combination of timestamp, private key, and public key.
+
+
